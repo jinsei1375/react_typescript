@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
+import Home from './Home';
+import Count from './Count';
+import Footer from './components/Footer';
+import Form from './Form';
 
 function App() {
-  return (
-    <div className="App">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-      </Routes>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/form" element={<Form />} />
+				{/*<Route path="/form/confirm" element={<Confirm />} />
+				<Route path="/form/completed" element={<Completed />} /> */}
+				<Route path="/count" element={<Count />} />
+			</Routes>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
