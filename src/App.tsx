@@ -5,6 +5,8 @@ import Home from './Home';
 import Count from './Count';
 import Footer from './components/Footer';
 import Form from './Form';
+import Confirm from './Confirm';
+import Completed from './Completed';
 
 function App() {
 	return (
@@ -13,8 +15,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/form" element={<Form />} />
-				{/*<Route path="/form/confirm" element={<Confirm />} />
-				<Route path="/form/completed" element={<Completed />} /> */}
+				<Route path="/form/confirm" element={<Confirm />} />
+				<Route path="/form/completed" element={<Completed />} />
 				<Route path="/count" element={<Count />} />
 			</Routes>
 			<Footer />
